@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Document Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive interactive playground and documentation showing every standard HTML tag styled with modern CSS and enhanced with JavaScript.">
+    <meta name="author" content="Antigravity Web Standards Team">
+    <title>The Ultimate HTML5 Elements Showcase</title>
+    
+    <!-- Link to Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Script tag with defer to ensure HTML parsing finishes first -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Theme Toggle Floating Button (Initially styled and functional with JS, but HTML native markup is clean) -->
+    <div class="theme-switch-container">
+        <button id="theme-toggle" aria-label="Toggle dark/light theme">🌓 Toggle Theme</button>
+    </div>
+
+    <!-- Header Section -->
+    <header id="top-header">
+        <hgroup>
+            <h1>The Ultimate HTML Showcase</h1>
+            <p>A living playground demonstrating every standard HTML element under the sun, degrading gracefully without CSS or JS.</p>
+        </hgroup>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="workspace-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav aria-label="Main Table of Contents">
+                <h2>Navigation</h2>
+                <menu class="nav-links">
+                    <li><a href="#sectioning">1. Structure & Headings</a></li>
+                    <li><a href="#inline-text">2. Text Formatting & Inline Elements</a></li>
+                    <li><a href="#lists-figures">3. Lists, Pre & Blockquotes</a></li>
+                    <li><a href="#tables">4. Tabular Data</a></li>
+                    <li><a href="#multimedia">5. Multimedia & Graphics</a></li>
+                    <li><a href="#forms">6. Interactive Forms & Inputs</a></li>
+                    <li><a href="#interactive-elements">7. Interactive UI & Dialogs</a></li>
+                    <li><a href="#scripting-templates">8. Web Components & Scripting</a></li>
+                </menu>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- noscript block shows if JavaScript is disabled -->
+            <noscript>
+                <div class="noscript-banner">
+                    <strong>⚠️ JavaScript is Disabled:</strong> The core HTML showcase runs natively without issues, but interactive demos like custom dialog popups, active theme toggling, live calculations, drag-and-drop, and dynamic canvas rendering will not run.
+                </div>
+            </noscript>
+
+            <!-- Section 1: Document Structure & Headings -->
+            <section id="sectioning" class="showcase-card">
+                <header class="card-header">
+                    <h2>1. Structure & Headings</h2>
+                    <p>Demonstrating sectioning, outlines, and structural layout tags.</p>
+                </header>
+
+                <article class="demo-box">
+                    <h3>Headings Showcase</h3>
+                    <p>Standard headings from level 1 down to level 6:</p>
+                    <div class="headings-demo">
+                        <h1>Heading 1 (&lt;h1&gt;)</h1>
+                        <h2>Heading 2 (&lt;h2&gt;)</h2>
+                        <h3>Heading 3 (&lt;h3&gt;)</h3>
+                        <h4>Heading 4 (&lt;h4&gt;)</h4>
+                        <h5>Heading 5 (&lt;h5&gt;)</h5>
+                        <h6>Heading 6 (&lt;h6&gt;)</h6>
+                    </div>
+                </article>
+
+                <article class="demo-box">
+                    <h3>Structural Elements & Article</h3>
+                    <p>The code blocks below reside inside an <code>&lt;article&gt;</code> tag containing a <code>&lt;section&gt;</code> and an <code>&lt;aside&gt;</code> component.</p>
+                    <aside class="aside-info">
+                        <strong>Sidebar Content (&lt;aside&gt;):</strong> This tag is traditionally used to wrap content tangential to the main text, such as a glossary, advertisements, or quick links.
+                    </aside>
+                    <address>
+                        Written by <a href="mailto:webmaster@example.com">Antigravity AI</a><br>
+                        DeepMind Workspace, Virtual System Room 404<br>
+                        Internet Gateway
+                    </address>
+                </article>
+            </section>
+
+            <!-- Section 2: Inline Text Semantics -->
+            <section id="inline-text" class="showcase-card">
+                <header class="card-header">
+                    <h2>2. Text Formatting & Inline Elements</h2>
+                    <p>HTML has a rich set of tags to convey precise inline semantic meaning.</p>
+                </header>
+
+                <article class="demo-box">
+                    <p>Here are inline elements applied contextually inside standard paragraphs:</p>
+                    <ul>
+                        <li>Use <strong>&lt;strong&gt; for strong importance</strong> and <b>&lt;b&gt; for drawing attention</b> without extra importance.</li>
+                        <li>Use <em>&lt;em&gt; for emphasis</em> and <i>&lt;i&gt; for alternate voices or technical terms</i>.</li>
+                        <li>This text contains a <small>&lt;small&gt; small print</small> element, representing side-comments and legal disclaimers.</li>
+                        <li>Use <mark>&lt;mark&gt; highlighted</mark> to indicate text marked or highlighted for reference.</li>
+                        <li>Use <abbr title="HyperText Markup Language">&lt;abbr&gt; HTML</abbr> to mark abbreviations, showing a tooltip on hover.</li>
+                        <li>Use <cite>&lt;cite&gt; The Web Standards Manual</cite> to reference the title of a work.</li>
+                        <li>Use <q>&lt;q&gt; inline quotation</q> for inline quotations.</li>
+                        <li>Use <dfn>&lt;dfn&gt; defining instance</dfn> to mark the defining instance of a term.</li>
+                        <li>A <data value="978-0-201-10179-9">&lt;data&gt; book isbn identifier</data> connects human-readable text to machine-readable data values.</li>
+                        <li>Specify times and dates using the time tag: <time datetime="2026-06-30">June 30, 2026</time>.</li>
+                        <li>Here are superscripts and subscripts: H<sub>2</sub>O and E = mc<sup>2</sup>.</li>
+                        <li>Code samples: inline code <code>let x = 10;</code>, variables <var>x</var>, user input keyboard shortcut <kbd>Ctrl</kbd> + <kbd>S</kbd>, and output logs <samp>Command executed successfully.</samp></li>
+                        <li>Text direction overrides: <bdo dir="rtl">This text runs right-to-left.</bdo> and <bdi>Isolated direction text: العربية</bdi> to protect it from document-level bidirectional algorithms.</li>
+                        <li>Ruby annotations (useful for East Asian typography representation):
+                            <ruby>
+                                漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
+                                字 <rp>(</rp><rt>じ</rt><rp>)</rp>
+                            </ruby>
+                        </li>
+                        <li>We can mark text edits: <del>&lt;del&gt; Deleted content</del> and <ins>&lt;ins&gt; Inserted content</ins>, or strikethrough <s class="crossed-out">&lt;s&gt; inaccurate content</s>.</li>
+                        <li>Underlining: <u class="spelling-err">&lt;u&gt; text with unarticulated spelling issues</u>.</li>
+                        <li>Line breaks: <br> Forced line break using <code>&lt;br&gt;</code> and a word break suggestion using <code>&lt;wbr&gt;</code> (allows browser to break longwordslikethis<wbr>ifrequired).</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Section 3: Lists, Pre & Blockquotes -->
+            <section id="lists-figures" class="showcase-card">
+                <header class="card-header">
+                    <h2>3. Lists, Preformatted Blocks, & Blockquotes</h2>
+                    <p>Demonstrating list variants, code segments, and quotation elements.</p>
+                </header>
+
+                <article class="demo-box">
+                    <h3>Unordered and Ordered Lists</h3>
+                    <ul>
+                        <li>Item A in Unordered List
+                            <ul>
+                                <li>Nested Sub-Item 1</li>
+                                <li>Nested Sub-Item 2</li>
+                            </ul>
+                        </li>
+                        <li>Item B in Unordered List</li>
+                    </ul>
+
+                    <ol>
+                        <li>First step in Ordered List</li>
+                        <li>Second step in Ordered List
+                            <ol type="a">
+                                <li>Nested step (a)</li>
+                                <li>Nested step (b)</li>
+                            </ol>
+                        </li>
+                        <li>Third step in Ordered List</li>
+                    </ol>
+                </article>
+
+                <article class="demo-box">
+                    <h3>Description Lists (&lt;dl&gt;)</h3>
+                    <dl>
+                        <dt>HTML5</dt>
+                        <dd>The standard markup language for creating web pages and web applications.</dd>
+                        <dt>CSS3</dt>
+                        <dd>Cascading Style Sheets used to describe the presentation and layout of a document written in HTML.</dd>
+                    </dl>
+                </article>
+
+                <article class="demo-box">
+                    <h3>Blockquotes, Figures, and Preformatted Text</h3>
+                    <blockquote>
+                        "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect."
+                        <footer>— Tim Berners-Lee</footer>
+                    </blockquote>
+
+                    <figure>
+                        <pre><code>// A preformatted block preserves whitespace and newlines
+function greet(user) {
+    console.log(`Hello, ${user}! Welcome to the showcase.`);
+}
+greet('Developer');</code></pre>
+                        <figcaption>Figure 1: Sample Javascript block inside a figcaption.</figcaption>
+                    </figure>
+                </article>
+
+                <hr> <!-- Horizontal rule separator -->
+            </section>
+
+            <!-- Section 4: Tabular Data -->
+            <section id="tables" class="showcase-card">
+                <header class="card-header">
+                    <h2>4. Tabular Data</h2>
+                    <p>The standard structure for organized data tables.</p>
+                </header>
+
+                <article class="demo-box table-container">
+                    <table>
+                        <caption>Web Standard Support Matrix</caption>
+                        <colgroup>
+                            <col class="col-category">
+                            <col class="col-feature">
+                            <col class="col-status">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Feature / Element</th>
+                                <th>Core Support</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Structure</td>
+                                <td>Semantic Elements (&lt;main&gt;, &lt;aside&gt;)</td>
+                                <td>Modern Browsers</td>
+                            </tr>
+                            <tr>
+                                <td>Multimedia</td>
+                                <td>Native Audio &amp; Video</td>
+                                <td>Universal</td>
+                            </tr>
+                            <tr>
+                                <td>Graphics</td>
+                                <td>HTML Canvas &amp; SVG rendering</td>
+                                <td>Hardware Accelerated</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Total Core Modules Highlighted</td>
+                                <td>3 Main Branches</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </article>
+            </section>
+
+            <!-- Section 5: Multimedia & Graphics -->
+            <section id="multimedia" class="showcase-card">
+                <header class="card-header">
+                    <h2>5. Multimedia &amp; Graphics</h2>
+                    <p>Demonstrating media embedding, vectors, canvas graphics, and mathematical expressions.</p>
+                </header>
+
+                <!-- Responsive Picture Tag -->
+                <article class="demo-box">
+                    <h3>Responsive Graphics (&lt;picture&gt; &amp; &lt;img&gt;)</h3>
+                    <picture>
+                        <!-- Fallback source tags, showing how picture serves multiple media options -->
+                        <source srcset="https://picsum.photos/id/1018/800/400" media="(min-width: 800px)">
+                        <source srcset="https://picsum.photos/id/1018/500/300" media="(min-width: 500px)">
+                        <img src="https://picsum.photos/id/1018/400/250" alt="Beautiful landscape backdrop loaded responsively" class="responsive-img">
+                    </picture>
+                </article>
+
+                <!-- Audio and Video tags -->
+                <article class="demo-box">
+                    <h3>Native Audio &amp; Video Controls</h3>
+                    <p>Fully functional native controls for embedded media files. Fallbacks are displayed inside the elements if unsupported.</p>
+                    
+                    <div class="media-container">
+                        <div class="video-wrapper">
+                            <video controls width="100%" poster="https://picsum.photos/id/1015/800/450">
+                                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default>
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="media-caption">Video: Google Blazes Sample clip</p>
+                        </div>
+                        
+                        <div class="audio-wrapper">
+                            <audio controls>
+                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio tag.
+                            </audio>
+                            <p class="media-caption">Audio: SoundHelix public demo track</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Embedded objects, frames, maps -->
+                <article class="demo-box">
+                    <h3>Embeds, Iframes, &amp; Image Maps</h3>
+                    <p>An iframe pointing to a sandbox document page, and an image map with coordinates:</p>
+                    
+                    <div class="embeds-grid">
+                        <iframe src="about:blank" title="Sandbox empty iframe placeholder" class="demo-iframe"></iframe>
+                        
+                        <div class="map-demo">
+                            <!-- Image Map Example -->
+                            <img src="https://picsum.photos/id/1025/300/200" usemap="#dogmap" alt="Cute pug wearing blanket" class="responsive-img">
+                            <map name="dogmap">
+                                <area shape="rect" coords="34,44,270,170" alt="Dog Area" href="https://wikipedia.org/wiki/Dog" target="_blank">
+                            </map>
+                            <p class="caption-under">Interactive Map (click the dog to open Wiki)</p>
+                        </div>
+                    </div>
+
+                    <div class="embed-extra">
+                        <!-- embed and object tag showcases -->
+                        <details class="advanced-disclosure">
+                            <summary>View &lt;object&gt; and &lt;embed&gt; tag markup</summary>
+                            <div class="code-preview">
+                                <p>Standard HTML allows nested objects for fallbacks:</p>
+                                <object data="nonexistent_media.pdf" type="application/pdf" width="100%" height="200px">
+                                    <embed src="nonexistent_media.pdf" type="application/pdf">
+                                    <p>Your browser does not support embedding PDF files. You can download the <a href="#">mockup file</a> instead.</p>
+                                </object>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+                <!-- SVG and MathML and Canvas -->
+                <article class="demo-box">
+                    <h3>SVG, MathML, &amp; Canvas Demos</h3>
+                    
+                    <div class="graphics-grid">
+                        <!-- Inline SVG -->
+                        <div class="graphic-item svg-wrapper">
+                            <h4>SVG (Scalable Vector Graphics)</h4>
+                            <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="demo-svg">
+                                <circle cx="50" cy="50" r="40" stroke="#00d2ff" stroke-width="4" fill="rgba(0, 210, 255, 0.2)" />
+                                <rect x="30" y="30" width="40" height="40" stroke="#00f2fe" stroke-width="2" fill="none" transform="rotate(45 50 50)" />
+                                <text x="50" y="55" font-family="'Outfit', sans-serif" font-size="12" fill="#fff" text-anchor="middle">HTML5</text>
+                            </svg>
+                        </div>
+
+                        <!-- Canvas element for JS drawing -->
+                        <div class="graphic-item canvas-wrapper">
+                            <h4>Dynamic &lt;canvas&gt;</h4>
+                            <canvas id="demo-canvas" width="150" height="150">Canvas not supported</canvas>
+                            <p class="caption-under">(Drawn live by JS; works gracefully blank if JS disabled)</p>
+                        </div>
+
+                        <!-- MathML element -->
+                        <div class="graphic-item mathml-wrapper">
+                            <h4>MathML (Mathematical Expressions)</h4>
+                            <math display="block">
+                                <mrow>
+                                    <mi>x</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mo>&#x2212;</mo>
+                                            <mi>b</mi>
+                                            <mo>&#x00B1;</mo>
+                                            <msqrt>
+                                                <msup>
+                                                    <mi>b</mi>
+                                                    <mn>2</mn>
+                                                </msup>
+                                                <mo>&#x2212;</mo>
+                                                <mn>4</mn>
+                                                <mi>a</mi>
+                                                <mi>c</mi>
+                                            </msqrt>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                            <mi>a</mi>
+                                        </mrow>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Section 6: Forms & Inputs -->
+            <section id="forms" class="showcase-card">
+                <header class="card-header">
+                    <h2>6. Interactive Forms &amp; Inputs</h2>
+                    <p>Demonstrating standard browser forms, input styles, groupings, and calculation outputs.</p>
+                </header>
+
+                <article class="demo-box">
+                    <form action="#" method="get" id="showcase-form" onsubmit="event.preventDefault();">
+                        <fieldset>
+                            <legend>User Profile Setup</legend>
+
+                            <div class="form-row">
+                                <label for="username">User Name:</label>
+                                <input type="text" id="username" name="username" placeholder="e.g. Neo" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="user-email">Email Address:</label>
+                                <input type="email" id="user-email" name="user-email" placeholder="neo@matrix.org" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="user-password">Security Key:</label>
+                                <input type="password" id="user-password" name="user-password" placeholder="••••••••" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="browser-list">Primary Testing Browser:</label>
+                                <input type="text" id="browser-list" name="browser" list="browsers" placeholder="Start typing browser name...">
+                                <datalist id="browsers">
+                                    <option value="Google Chrome">
+                                    <option value="Mozilla Firefox">
+                                    <option value="Apple Safari">
+                                    <option value="Microsoft Edge">
+                                    <option value="Opera">
+                                </datalist>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Preferences &amp; Advanced Controls</legend>
+
+                            <div class="form-row">
+                                <label for="system-speed">Core Allocation Level:</label>
+                                <select id="system-speed" name="system-speed">
+                                    <optgroup label="Server Safe Mode">
+                                        <option value="low">1 Core (Eco)</option>
+                                        <option value="mid" selected>2 Cores (Standard)</option>
+                                    </optgroup>
+                                    <optgroup label="Overclock Power">
+                                        <option value="high">4 Cores (Performance)</option>
+                                        <option value="max">8 Cores (HyperDrive)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="form-row flex-row">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                    <label for="newsletter">Receive nightly standard updates</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <span>Access Level:</span>
+                                    <input type="radio" id="role-user" name="role" value="user" checked>
+                                    <label for="role-user">Visitor</label>
+                                    <input type="radio" id="role-admin" name="role" value="admin">
+                                    <label for="role-admin">Root Administrator</label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="special-instructions">Special Instructions (&lt;textarea&gt;):</label>
+                                <textarea id="special-instructions" name="instructions" rows="3" placeholder="Enter configuration commands or notes..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Form Math &amp; Measurement Scales</legend>
+                            
+                            <!-- Slider Range connected to live Output -->
+                            <div class="form-row range-calc">
+                                <label for="multiplier-slider">Interactive Power Level (Slider):</label>
+                                <input type="range" id="multiplier-slider" name="multiplier" min="1" max="100" value="50">
+                                <span class="val-display">Value: <output id="slider-output" for="multiplier-slider">50</output>%</span>
+                            </div>
+
+                            <!-- Meter (semantic tag for known values) -->
+                            <div class="form-row">
+                                <label for="disk-meter">Disk Usage Index (Meter):</label>
+                                <div class="progress-container">
+                                    <meter id="disk-meter" min="0" max="100" low="30" high="80" optimum="50" value="72">72%</meter>
+                                    <span class="val-display">72 / 100 GB</span>
+                                </div>
+                            </div>
+
+                            <!-- Progress bar (semantic tag for loading status) -->
+                            <div class="form-row">
+                                <label for="sync-progress">Synchronizing Database (Progress):</label>
+                                <div class="progress-container">
+                                    <progress id="sync-progress" max="100" value="45">45%</progress>
+                                    <span class="val-display" id="progress-val">45% Completed</span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Form action buttons -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Process Form Submissions</button>
+                            <button type="reset" class="btn btn-secondary">Reset Configuration Settings</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+
+            <!-- Section 7: Interactive UI Elements -->
+            <section id="interactive-elements" class="showcase-card">
+                <header class="card-header">
+                    <h2>7. Interactive UI &amp; Dialogs</h2>
+                    <p>Demonstrating disclosure details, interactive search, dialog screens, and drag-and-drop elements.</p>
+                </header>
+
+                <!-- Search component -->
+                <article class="demo-box">
+                    <h3>Search Element (&lt;search&gt;)</h3>
+                    <search id="search-box">
+                        <form onsubmit="event.preventDefault(); alert('Searched for: ' + this.querySelector('input').value);">
+                            <label for="search-input" class="sr-only">Search the workspace:</label>
+                            <input type="search" id="search-input" placeholder="Search parameters..." aria-label="Search">
+                            <button type="submit">Execute Search</button>
+                        </form>
+                    </search>
+                </article>
+
+                <!-- Details & Summary components -->
+                <article class="demo-box">
+                    <h3>Native Disclosure Widget (&lt;details&gt; &amp; &lt;summary&gt;)</h3>
+                    <p>These widgets work natively without CSS or JS! Toggling them displays nested information.</p>
+                    
+                    <details class="interactive-details">
+                        <summary>Click to view system log details</summary>
+                        <div class="disclosure-content">
+                            <p><strong>System Log:</strong> [2026-06-30 09:47:11] Kernel loaded successfully. CSS rendering pipeline activated. JavaScript context initialized.</p>
+                        </div>
+                    </details>
+
+                    <details class="interactive-details" open>
+                        <summary>System Status (Open by Default)</summary>
+                        <div class="disclosure-content">
+                            <p>All core threads report 100% standard compatibility. Ready to parse user inputs.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- Dialog Element (Native Dialogs) -->
+                <article class="demo-box">
+                    <h3>Native Overlay Screen (&lt;dialog&gt;)</h3>
+                    <p>Native popups can be styled in modern CSS. Click the button to trigger. If JavaScript is disabled, you can see the backup form logic inside, but script handles overlays securely.</p>
+                    
+                    <button type="button" id="open-dialog-btn" class="btn btn-special">📂 Open System Diagnostics Dialog</button>
+
+                    <dialog id="diagnostic-dialog">
+                        <div class="dialog-inner">
+                            <h3>🔍 Diagnostic Report</h3>
+                            <hr>
+                            <p>This overlay container is powered by the HTML5 <code>&lt;dialog&gt;</code> element. It centers natively in the viewport and blocks interaction with the rest of the page when shown modal.</p>
+                            <ul>
+                                <li>HTML parsing: Valid</li>
+                                <li>CSS engine support: Grid &amp; Flexbox enabled</li>
+                                <li>JS modules loaded: True</li>
+                            </ul>
+                            <div class="dialog-actions">
+                                <!-- Standard HTML submission inside dialog with method="dialog" automatically closes it -->
+                                <form method="dialog">
+                                    <button class="btn btn-primary" id="close-dialog-btn">Close Report</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                </article>
+
+                <!-- Drag and Drop Demonstration -->
+                <article class="demo-box">
+                    <h3>Drag &amp; Drop Sandbox</h3>
+                    <p>Drag the element below into either target container. This showcases HTML drag and drop API setup.</p>
+                    
+                    <div class="drag-drop-playground">
+                        <div class="drop-zone" id="zone-1">
+                            <span class="zone-label">Source Zone</span>
+                            <!-- Draggable tag -->
+                            <div id="draggable-item" draggable="true">
+                                📦 Draggable Core Block
+                            </div>
+                        </div>
+                        <div class="drop-zone" id="zone-2">
+                            <span class="zone-label">Drop Target Zone</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Section 8: Web Components & Scripting -->
+            <section id="scripting-templates" class="showcase-card">
+                <header class="card-header">
+                    <h2>8. Web Components &amp; Scripting</h2>
+                    <p>Demonstrating standard layout templates, scripting handles, and custom web components.</p>
+                </header>
+
+                <article class="demo-box">
+                    <h3>Template &amp; Slots (&lt;template&gt;, &lt;slot&gt;)</h3>
+                    <p>Templates are parsed by the browser but remain inert (hidden) until instantiated by JavaScript. Below, we've registered a custom component <code>&lt;user-card&gt;</code> that instantiates a template with standard slots.</p>
+                    
+                    <!-- HTML5 Web Component Template -->
+                    <template id="user-card-template">
+                        <style>
+                            .web-component-card {
+                                border: 2px dashed #00d2ff;
+                                border-radius: 12px;
+                                padding: 15px;
+                                margin-top: 15px;
+                                background: rgba(255, 255, 255, 0.05);
+                                font-family: 'Outfit', sans-serif;
+                            }
+                            .comp-title {
+                                font-size: 1.1rem;
+                                color: #00f2fe;
+                                margin-top: 0;
+                            }
+                        </style>
+                        <div class="web-component-card">
+                            <h4 class="comp-title">User Profile Component (Web Component Instance)</h4>
+                            <p><strong>Code-name:</strong> <slot name="codename">Default codename</slot></p>
+                            <p><strong>Rank:</strong> <slot name="rank">Default Rank</slot></p>
+                        </div>
+                    </template>
+
+                    <!-- Using the custom element. If JS is disabled, fallback elements inside slots show as static HTML! -->
+                    <div class="component-mount-point">
+                        <user-card>
+                            <span slot="codename">Trinity</span>
+                            <span slot="rank">First Officer</span>
+                        </user-card>
+                        <p class="caption-under">(Fallback text parses natively if scripting or components are not processed by Javascript)</p>
+                    </div>
+                </article>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="bottom-footer">
+        <p>&copy; 2026 HTML5 Specification Demonstration. Made with precision styling and semantic cleanliness.</p>
+        <p>Current Standards Status: <span class="badge">Living Standard Compliant</span></p>
+    </footer>
+
+</body>
+</html>
